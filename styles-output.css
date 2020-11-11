@@ -1,0 +1,245 @@
+/* Hamburger Icon */
+#menu {
+  width: 35px;
+  height: 30px;
+  margin: 30px 0 20px 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+/* Hamburger Change Effect */
+.change .bar {
+  background-color: lime;
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotate(45deg);
+}
+
+/* Hamburger Drop-Down */
+.nav li a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  font-weight: bold;
+}
+
+.nav li {
+  list-style: none;
+  padding: 16px 0;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  text-align: center;
+}
+
+.nav {
+  padding: 0;
+  margin: 0 20px;
+  width: 150px;
+  transition: 0.3s ease;
+  display: none;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  opacity: 0.5;
+}
+
+/* Hamburger Color Effects */
+.change {
+  display: block;
+}
+
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 30px 0 20px 20px;
+  background: radial-gradient(circle, whitesmoke, black);
+  transition: 0.3s ease;
+  opacity: 0.65;
+}
+
+.change-bg {
+  width: 550px;
+  height: 540px;
+  transform: translate(-60%, -30%);
+}
+
+.menu-bg, #menu-bar {
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 50%;
+}
+
+#menu-bar {
+  z-index: 2;
+}
+
+/* Satellite Viewer */
+.satellite-menu {
+  color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  width: 60vh;
+  opacity: 0%;
+  text-align: center;
+  transition: opacity 1.8s ease;
+}
+
+#im-an-object {
+  color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  width: 25vh;
+  position: fixed;
+  top: 42%;
+  left: 45%;
+  text-align: center;
+}
+
+#im-an-object:hover {
+  cursor: pointer;
+}
+
+.show-sat-view {
+  float: right;
+  position: relative;
+  /* necessary to show through the SASS background*/
+  opacity: 100%;
+}
+
+/* ????? */
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.stars {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+}
+
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  -moz-animation: move-background 70s linear infinite;
+  -ms-animation: move-background 70s linear infinite;
+  -o-animation: move-background 70s linear infinite;
+  -webkit-animation: move-background 70s linear infinite;
+  animation: move-background 70s linear infinite;
+}
+
+.clouds {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  -moz-animation: move-background 150s linear infinite;
+  -ms-animation: move-background 150s linear infinite;
+  -o-animation: move-background 150s linear infinite;
+  -webkit-animation: move-background 150s linear infinite;
+  animation: move-background 150s linear infinite;
+}
+
+img {
+  height: 70vh;
+  width: 120vh;
+  position: absolute;
+  z-index: 3;
+  top: 15%;
+  left: 23%;
+}
+
+@font-face {
+  font-family: "slant-font";
+  src: url("SLANT.TTF") format("truetype");
+}
+#nav a {
+  font-family: "slant-font", comic-sans;
+}
+
+/*# sourceMappingURL=styles-output.css.map */
