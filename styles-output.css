@@ -26,6 +26,7 @@
 
 /* Hamburger Change Effect */
 .change .bar {
+  /* color the hamburger after click */
   background-color: white;
 }
 
@@ -52,41 +53,50 @@
 }
 
 .nav li {
+  /* each satellite(li) in the box (ul.nav) */
   list-style: none;
   padding: 16px 0;
-  border-style: solid;
-  border-color: white;
+  border-bottom-style: dotted;
+  border-color: #f806d8;
   border-width: 1px;
   text-align: center;
 }
 
 .nav {
+  /* The box around the list */
   padding: 0;
   margin: 0 20px;
   width: 150px;
-  transition: 0.3s ease;
-  display: none;
+  transition: 3s ease;
   border-style: solid;
-  border-color: white;
-  border-width: 1px;
-  opacity: 0.5;
+  border-color: #02701a;
+  border-width: 3px;
+  opacity: 0;
+  transition: 1s ease;
 }
 
 /* Hamburger Color Effects */
 .change {
-  display: block;
+  /* being applied to .nav*/
+  opacity: 100%;
 }
 
 .menu-bg {
+  /* the circle */
   z-index: 1;
   width: 0;
+  /* initial dimensions*/
   height: 0;
+  /* initial dimensions*/
   margin: 30px 0 20px 20px;
-  transition: 0.3s ease;
+  /* starting point */
+  background: radial-gradient(circle, whitesmoke, black);
+  transition: 1s ease;
   opacity: 0.65;
 }
 
 .change-bg {
+  /* the circle transition, when class is changed to .change-bg */
   width: 550px;
   height: 540px;
   transform: translate(-60%, -30%);
@@ -105,14 +115,16 @@
 
 /* Satellite Viewer */
 .satellite-menu {
+  /* satellite window */
   color: white;
   border-style: solid;
-  border-color: white;
+  border-color: red;
   border-width: 1px;
   width: 60vh;
-  opacity: 0%;
+  opacity: 100%;
   text-align: center;
-  transition: opacity 1.8s ease;
+  top: -400px;
+  /* hide the menu up above, to bring down to user*/
 }
 
 #im-an-object {
@@ -135,9 +147,23 @@
   float: right;
   position: relative;
   /* necessary to show through the SASS background*/
-  opacity: 100%;
+  opacity: 0%;
+  animation: drop 1.3s ease forwards;
 }
 
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(430px);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(400px);
+    opacity: 1;
+  }
+}
 /* ????? */
 @keyframes move-background {
   from {
@@ -239,6 +265,19 @@ img {
 }
 #nav a {
   font-family: "slant-font", comic-sans;
+}
+
+label {
+  color: white;
+}
+
+form {
+  opacity: 100%;
+}
+
+.user-panel {
+  opacity: 100%;
+  border: 2px #ffe600 solid;
 }
 
 /*# sourceMappingURL=styles-output.css.map */

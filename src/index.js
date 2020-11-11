@@ -4,6 +4,8 @@ const menuBg = document.getElementById('menu-bg')
 const obj = document.getElementById('im-an-object')
 const satelliteMenu = document.getElementById('satellite-menu')
 
+const userPanel = document.getElementById('user-panel')
+
 
 function main(){
     // change pixel sizing of 'menus' to use VH
@@ -20,8 +22,8 @@ main()
 //////////////////////////////////////////////////////////////////////////
 function onClickMenu(){
     hamburger.classList.toggle("change")
-
     nav.classList.toggle("change")
+    userPanel.classList.toggle("change")
 
     menuBg.classList.toggle("change-bg")
 }
