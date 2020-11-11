@@ -4,6 +4,7 @@
 //     background-size: cover;
 // }
 
+
 /* Hamburger Icon */
 #menu{
     width: 35px;
@@ -32,7 +33,7 @@
 
 /* Hamburger Change Effect */
 .change .bar{
-    background-color: rgb(0, 255, 0);
+    background-color: rgb(255, 255, 255);
 }
 
 .change #bar1{
@@ -49,7 +50,7 @@
 
 /* Hamburger Drop-Down */
 .nav li a{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none
 }
 
@@ -61,7 +62,7 @@
     list-style: none;
     padding: 16px 0;
     border-style: solid;
-    border-color: rgb(0, 0, 0);
+    border-color: rgb(255, 255, 255);
     border-width: 1px;
     text-align: center;
 }
@@ -73,7 +74,7 @@
     transition: 0.3s ease;
     display: none;
     border-style: solid;
-    border-color: rgb(0, 0, 0);
+    border-color: rgb(255, 255, 255);
     border-width: 1px;
     opacity: .5;
 }
@@ -88,7 +89,7 @@
     width: 0;
     height: 0;
     margin: 30px 0 20px 20px;
-    background: radial-gradient(circle, whitesmoke, rgb(0, 0, 0));
+    // background: radial-gradient(circle, whitesmoke, rgb(0, 0, 0));
     transition: 0.3s ease;
     opacity: .65;
 }

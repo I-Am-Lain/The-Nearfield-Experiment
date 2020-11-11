@@ -10,6 +10,8 @@ function main(){
     // add more cyber-punk looking theme
     // create an effect for how the "sat-view" will show up
     // create a "Authors" link at the bottom, or use a (?) icon
+
+    // change hamburger menu to part form, part list
 }
 
 main()
