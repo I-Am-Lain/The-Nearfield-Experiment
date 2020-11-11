@@ -236,7 +236,7 @@ img {
 
 @font-face {
   font-family: "slant-font";
-  src: url("SLANT.TTF") format("truetype");
+  src: url("assets/SLANT.TTF") format("truetype");
 }
 #nav a {
   font-family: "slant-font", comic-sans;
