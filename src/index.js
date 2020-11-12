@@ -8,7 +8,11 @@ const userPanel = document.getElementById('user-panel')
 const form = document.querySelector('form')
 
 let satelliteData = [{id: 0, name: "sat one", type: "active"},{id: 1, name: "sat two", type: "inactive"},{id: 2, name: "sat three", type: "debris"},
-{id: 3, name: "sat four", type: "debris"},{id: 4, name: "sat five", type: "inactive"},{id: 5, name: "sat six", type: "active"}]
+{id: 3, name: "sat four", type: "debris"},{id: 4, name: "sat five", type: "inactive"},{id: 5, name: "sat six", type: "active"},
+{id: 6, name: "sat seven", type: "debris"},{id: 7, name: "sat eight", type: "inactive"},{id: 8, name: "sat nine", type: "active"},
+{id: 9, name: "sat ten", type: "debris"},{id: 10, name: "sat eleven", type: "inactive"},{id: 11, name: "sat twelve", type: "active"},
+{id: 12, name: "sat thirteen", type: "debris"},{id: 13, name: "sat fourteen", type: "inactive"},{id: 14, name: "sat fifteen", type: "active"},
+{id: 15, name: "sat sixteen", type: "debris"},{id: 16, name: "sat seventeen", type: "inactive"},{id: 17, name: "sat eighteen", type: "active"},]
 
 
 function main(){
@@ -68,6 +72,7 @@ function satelliteSelector(){
     nav.addEventListener("click", e => {
         satelliteMenu.innerHTML = ''
         displaySatellite(e.target.id)
+        satelliteMenu.classList.toggle("show-sat-view")
     })
 }
 
@@ -96,6 +101,6 @@ function onClickMenu(){
     menuBg.classList.toggle("change-bg")
 }
 
-function onSatelliteClick(){
-    satelliteMenu.classList.toggle("show-sat-view")
-}
+// function onSatelliteClick(){
+//     satelliteMenu.classList.toggle("show-sat-view")
+// }

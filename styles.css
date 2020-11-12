@@ -66,13 +66,18 @@
   /* The box around the list */
   padding: 0;
   margin: 0 20px;
-  height: 58vh;
   width: 45vh;
   border-style: solid;
   border-color: #02701a;
   border-width: 3px;
   opacity: 0;
   transition: 1.3s ease;
+  max-height: 58vh;
+  /*The important part*/
+  overflow-y: auto;
+  /*Also...*/
+  overflow-x: hidden;
+  /*And the end of the important part*/
 }
 
 /* Hamburger Color Effects */
