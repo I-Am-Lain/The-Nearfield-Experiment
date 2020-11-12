@@ -5,6 +5,10 @@ const obj = document.getElementById('im-an-object')
 const satelliteMenu = document.getElementById('satellite-menu')
 
 const userPanel = document.getElementById('user-panel')
+const form = document.querySelector('form')
+
+let satelliteData = [{id: 0, name: "sat one", type: "active"},{id: 1, name: "sat two", type: "inactive"},{id: 2, name: "sat three", type: "debris"},
+{id: 3, name: "sat four", type: "debris"},{id: 4, name: "sat five", type: "inactive"},{id: 5, name: "sat six", type: "active"}]
 
 
 function main(){
@@ -14,16 +18,80 @@ function main(){
     // create a "Authors" link at the bottom, or use a (?) icon
 
     // change hamburger menu to part form, part list
+    showAllSatellites()
+    formListener()
+    satelliteSelector()
 }
 
 main()
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
+function formListener(){
+    form.addEventListener("change", e => {
+        nav.innerHTML = ''
+        if (e.target.value === 'show-all'){
+            showAllSatellites()
+        } else {showFilteredSatellites(e.target.value)}
+
+        // takes back type select, and renders only those with that type
+    })
+}
+
+function showAllSatellites(){
+    satelliteData.forEach(sat =>{
+        const li = document.createElement('li')
+        li.id = sat.id
+
+        li.innerText = `${sat['name']}, type is ${sat['type']}`
+
+        nav.append(li)
+    })
+}
+
+function showFilteredSatellites(type){
+    satelliteData.forEach(sat =>{
+        if (sat.type === type){
+            const li = document.createElement('li')
+            li.id = sat.id
+
+            li.innerText = `${sat['name']}, type is ${sat['type']}`
+
+            nav.append(li)
+        }
+    })
+}
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+function satelliteSelector(){
+    nav.addEventListener("click", e => {
+        satelliteMenu.innerHTML = ''
+        displaySatellite(e.target.id)
+    })
+}
+
+function displaySatellite(satelliteId){
+    const theSatellite = satelliteData[satelliteId] // or something like this
+
+    const h1 = document.createElement('h1')
+    h1.innerText = theSatellite.name
+
+    const p = document.createElement('p')
+    p.innerText = `current satellite id: ${theSatellite.id}`
+
+    const p2 = document.createElement('p')
+    p.innerText = `current satellite type: ${theSatellite.type}`
+
+    satelliteMenu.append(h1, p, p2)
+}
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 function onClickMenu(){
     hamburger.classList.toggle("change")
     nav.classList.toggle("change")
-    userPanel.classList.toggle("change")
+    userPanel.classList.toggle("user-change")
 
     menuBg.classList.toggle("change-bg")
 }
