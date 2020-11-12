@@ -95,26 +95,26 @@
 /* Hamburger Color Effects */
 .change{   /* being applied to .nav*/
     // display: block;
-    opacity: 100%
+    opacity: 75%
 }
 
-.menu-bg{      /* the circle */
-    z-index: 1;
-    width: 0;  /* initial dimensions*/
-    height: 0; /* initial dimensions*/
-    margin: 30px 0 20px 20px;  /* starting point */
-    // background: radial-gradient(circle, whitesmoke, rgb(0, 0, 0));
-    transition: 1s ease;
-    opacity: .65;
-}
+// .menu-bg{      /* the circle */
+//     z-index: 1;
+//     width: 0;  /* initial dimensions*/
+//     height: 0; /* initial dimensions*/
+//     margin: 30px 0 20px 20px;  /* starting point */
+//     // background: radial-gradient(circle, whitesmoke, rgb(0, 0, 0));
+//     transition: 1.7s ease;
+//     opacity: .65;
+// }
 
-.change-bg{    /* the circle transition, when class is changed to .change-bg */
-    width: 550px;
-    height: 540px;
-    transform: translate(-60%, -30%);
-    -webkit-box-shadow: inset 0 0 40px 20px rgb(73, 96, 114);
-    box-shadow: inset 0 0 40px 20px rgb(73, 96, 114);
-}
+// .change-bg{    /* the circle transition, when class is changed to .change-bg */
+//     width: 550px;
+//     height: 540px;
+//     transform: translate(-60%, -30%);
+//     -webkit-box-shadow: inset 0 0 40px 20px rgb(73, 96, 114);
+//     box-shadow: inset 0 0 40px 20px rgb(73, 96, 114);
+// }
 
 .menu-bg, #menu-bar{
     top: 0;
@@ -140,21 +140,21 @@
     top: -400px;    /* hide the menu up above, to bring down to user*/
 }
 
-#im-an-object{
-    color: white;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    border-width: 1px;
-    width: 25vh;
-    position: fixed;
-    top: 42%;
-    left: 45%;
-    text-align: center;
-}
+// #im-an-object{
+//     color: white;
+//     border-style: solid;
+//     border-color: rgb(255, 255, 255);
+//     border-width: 1px;
+//     width: 25vh;
+//     position: fixed;
+//     top: 42%;
+//     left: 45%;
+//     text-align: center;
+// }
 
-#im-an-object:hover{
-    cursor: pointer;
-}
+// #im-an-object:hover{
+//     cursor: pointer;
+// }
 
 .show-sat-view{
     // display: block;
@@ -279,15 +279,15 @@
 
 
 
-// EXTRA
-@font-face {
-    font-family:"slant-font";
-    src: url("assets/SLANT.TTF") format("truetype");
-}
+//////////////////////////////////////////// EXTRAS
+// @font-face {
+//     font-family:"slant-font";
+//     src: url("assets/SLANT.TTF") format("truetype");
+// }
 
-#nav a{
-    font-family: 'slant-font', comic-sans;
-}
+// #nav a{
+//     font-family: 'slant-font', comic-sans;
+// }
 
 label{
     color: white
@@ -296,6 +296,8 @@ label{
 form{
     opacity: 100%;
     margin-bottom: 20px; 
+    // -webkit-box-shadow: inset 0 0 40px 20px rgb(73, 96, 114);
+    // box-shadow: inset 0 0 40px 20px rgb(73, 96, 114);
 }
 
 .user-panel{
@@ -306,6 +308,8 @@ form{
     opacity: 0%;
     border: 2px rgb(255, 230, 0) solid;
     transition: 1.3s ease;
+    // -webkit-box-shadow: inset 0 0 40px 20px rgb(73, 96, 114);
+    // box-shadow: inset 0 0 40px 20px rgb(73, 96, 114);
 }
 
 .user-change{

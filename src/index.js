@@ -16,12 +16,12 @@ let satelliteData = [{id: 0, name: "sat one", type: "active"},{id: 1, name: "sat
 
 
 function main(){
-    // change pixel sizing of 'menus' to use VH
-    // add more cyber-punk looking theme
-    // create an effect for how the "sat-view" will show up
+    // change pixel sizing of EVERYTHING to use VH
     // create a "Authors" link at the bottom, or use a (?) icon
 
-    // change hamburger menu to part form, part list
+    // change HOW the sat-view is displayed. 
+    // change the "resetting" of the sat-view
+
     showAllSatellites()
     formListener()
     satelliteSelector()
@@ -43,24 +43,42 @@ function formListener(){
 }
 
 function showAllSatellites(){
+    let counter = 0;
     satelliteData.forEach(sat =>{
         const li = document.createElement('li')
         li.id = sat.id
 
-        li.innerText = `${sat['name']}, type is ${sat['type']}`
+        if (counter%2 == 0){
+            li.style.backgroundColor = 'rgb(73, 96, 114)'
+            li.style.opacity = '40%'
+        }
+        counter++
 
+        const p = document.createElement('p')
+        p.innerText = `${sat['name']}, type is ${sat['type']}`
+
+        li.append(p)
         nav.append(li)
     })
 }
 
 function showFilteredSatellites(type){
+    let counter = 0;
     satelliteData.forEach(sat =>{
         if (sat.type === type){
             const li = document.createElement('li')
             li.id = sat.id
-
-            li.innerText = `${sat['name']}, type is ${sat['type']}`
-
+    
+            if (counter%2 == 0){
+                li.style.backgroundColor = 'rgb(73, 96, 114)'
+                li.style.opacity = '40%'
+            }
+            counter++
+    
+            const p = document.createElement('p')
+            p.innerText = `${sat['name']}, type is ${sat['type']}`
+    
+            li.append(p)
             nav.append(li)
         }
     })
@@ -70,9 +88,15 @@ function showFilteredSatellites(type){
 //////////////////////////////////////////////////////////////////////////
 function satelliteSelector(){
     nav.addEventListener("click", e => {
-        satelliteMenu.innerHTML = ''
-        displaySatellite(e.target.id)
-        satelliteMenu.classList.toggle("show-sat-view")
+        if (e.target.tagName === 'LI'){
+            satelliteMenu.innerHTML = ''
+            displaySatellite(e.target.id)
+            satelliteMenu.classList.toggle("show-sat-view")
+        } else {
+            satelliteMenu.innerHTML = ''
+            displaySatellite(e.target.parentElement.id)
+            satelliteMenu.classList.toggle("show-sat-view")
+        }
     })
 }
 
@@ -98,7 +122,7 @@ function onClickMenu(){
     nav.classList.toggle("change")
     userPanel.classList.toggle("user-change")
 
-    menuBg.classList.toggle("change-bg")
+    // menuBg.classList.toggle("change-bg")
 }
 
 // function onSatelliteClick(){
