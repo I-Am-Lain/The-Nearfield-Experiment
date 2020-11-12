@@ -22,6 +22,18 @@ function main(){
     // change HOW the sat-view is displayed. 
     // change the "resetting" of the sat-view
 
+
+    // try to implement "box shadow" transform/transition
+    // add typewriter effect
+
+    // set default value to ALL Satellites
+
+    // maybe effect for when each radio button is selected
+
+    // "fade back" or "minimize" window when closing hamburger button
+
+    // add eventListener to questions, animating "About Us" section
+
     showAllSatellites()
     formListener()
     satelliteSelector()
@@ -119,7 +131,7 @@ function displaySatellite(satelliteId){
 //////////////////////////////////////////////////////////////////////////
 function onClickMenu(){
     hamburger.classList.toggle("change")
-    nav.classList.toggle("change")
+    nav.classList.toggle("change-nav")
     userPanel.classList.toggle("user-change")
 
     // menuBg.classList.toggle("change-bg")

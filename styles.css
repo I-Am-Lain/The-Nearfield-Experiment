@@ -78,12 +78,15 @@
   /*Also...*/
   overflow-x: hidden;
   /*And the end of the important part*/
+  transition: transform 0.75s ease-out;
+  scale: 0.1;
 }
 
 /* Hamburger Color Effects */
-.change {
+.change-nav {
   /* being applied to .nav*/
   opacity: 75%;
+  transform: scale(10);
 }
 
 .menu-bg, #menu-bar {
@@ -248,6 +251,29 @@ form {
 
 .user-change {
   opacity: 100%;
+}
+
+.questions {
+  padding: 0;
+  bottom: 2.5vh;
+  right: 2.5vh;
+  width: 5vh;
+  height: 5vh;
+  position: absolute;
+  border: 2px white solid;
+  z-index: 5;
+  text-align: center;
+}
+
+.questions p {
+  margin: 0;
+  position: relative;
+  color: white;
+  font-size: 4vh;
+}
+
+.questions:hover {
+  cursor: help;
 }
 
 /*# sourceMappingURL=styles.css.map */
